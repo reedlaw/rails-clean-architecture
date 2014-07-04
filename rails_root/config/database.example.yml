@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  pool: 5
+  username: postgres
+  password: secret
+
+development:
+  <<: *default
+  database: <%= @app_name %>_development
+
+test:
+  <<: *default
+  database: <%= @app_name %>_test
+
+production:
+  <<: *default
+  database: <%= @app_name %>

@@ -1,3 +1,5 @@
+require 'response'
+
 class Interactor
   attr_reader :request, :response
 
