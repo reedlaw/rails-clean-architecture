@@ -5,7 +5,7 @@ shared_examples 'an entity' do
       expect(entity.id).to eql(1)
     end
     it "can't have non-accessible attributes assigned" do
-      expect { described_class.new(non_attrib: true) }.to raise_error
+      expect { described_class.new(non_attrib: true) }.to raise_error(NoMethodError)
     end
   end
 end
